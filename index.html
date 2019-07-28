@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Freecell</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+
+<style>
+    body{
+    	background: #E2E2E2;
+		width: 1200px;
+		height: 800px;
+		margin: 0 auto;
+		font-family: 'Lato', sans-serif;
+		overflow: hidden;
+    }
+
+
+
+	.container {
+		width: 970px;
+		background: #E2E2E2;
+	}
+
+	.area {
+		width: 95px;
+		height: 145px;
+	/*	border: 2px solid #FCFCFC;*/
+		background: rgba(255,255,255,0.6);
+		margin: -4px;
+		margin-top: 30px;
+	}
+    
+    .empty {
+    	width: 95px;
+    	height: 145px;
+    	border: 2px solid #FCFCFC;
+		margin-top: 50px;
+		margin-right: -27px;
+    }
+    
+    #spade, #heart,#dimond,#club {
+    	width: 95px;
+    	height: 145px;
+		margin-top: 50px;
+		margin-left: -20px;
+		background: rgba(255,255,255,0.6);
+		line-height: 145px;
+    	text-align: center;
+    }
+
+    #logo {
+    	margin-top: 83px;
+    	text-align: center;
+    	font-weight: bold;
+    }
+    
+    button {
+    	font-family: 'Lato', sans-serif;
+    	width: 120px;
+    	height: 40px;
+    	font-size: 12px;
+    	background: #222222;
+    	color: #FCFCFC;
+    	font-weight: 700;
+    	border-radius: 100px;
+    	margin-left: 25px;
+    }
+
+    
+</style>
+<body>
+	<div class="container">
+  <div class="row">
+    <div class="col">
+    	<div class="empty"></div>
+    </div>
+        <div class="col">
+    	<div class="empty"></div>
+    </div>
+        <div class="col">
+    	<div class="empty"></div>
+    </div>
+        <div class="col">
+    	<div class="empty"></div>
+    </div>
+
+    <div class="col">
+    	<div id="logo">
+    	<img src="king_happy.png" width="46px">FREECELL</div></div>
+    <div class="col">
+    	<div id="spade">
+    		<img src="S.png" width="48px">
+    	</div>
+    </div>
+        <div class="col">
+    	<div id="heart">
+    		<img src="H.png" width="48px">
+    	</div>
+    </div>
+        <div class="col">
+    	<div id="dimond">
+    		<img src="D.png" width="48px">
+    	</div>
+    </div>
+        <div class="col">
+    	<div id="club">
+    		<img src="C.png" width="48px">
+    	</div>
+    </div>
+
+  </div>
+</div>
+
+	<div class="container">
+  <div class="row">
+    <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+        <div class="col">
+    	<div class="area">
+    		
+    	</div>
+    </div>
+
+  </div>
+</div>
+<div style="margin-top: 200px" class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <hr>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      	<a class="nav-link" href="#">TIME: 00:00</a> 
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">SCORE:0</a>
+      </li>
+    </ul>
+<button type="button">NEW GAME</button>
+<button type="button">RESTART</button>
+<button type="button">HINT</button>
+<button type="button">UNDO</button>
+  </div>
+</nav>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
